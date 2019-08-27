@@ -3,6 +3,7 @@
 {% block title %}Flights{% endblock %}
 
 {% block body %}
+    <h1>Book a Flight</h1>
     <form>
         <div class="form-group">
             <select class="form-control" name="flight_id">
@@ -11,6 +12,14 @@
                     <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
                 {% endfor %}
             </select>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control" name="passenger_name" placeholder="Passenger's name">
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary">Book Flight</button>
         </div>
     </form>
 {% endblock %}
