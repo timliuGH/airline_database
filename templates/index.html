@@ -4,11 +4,13 @@
 
 {% block body %}
     <form>
-        <select>
-            <option value="">--Please select a flight--</option>
-            {% for flight in flights %}
-                <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
-            {% endfor %}
-        </select>
+        <div class="form-group">
+            <select class="form-control" name="flight_id">
+                <option value="">--Please select a flight--</option>
+                {% for flight in flights %}
+                    <option value="{{ flight.id }}">{{ flight.origin }} to {{ flight.destination }}</option>
+                {% endfor %}
+            </select>
+        </div>
     </form>
 {% endblock %}
