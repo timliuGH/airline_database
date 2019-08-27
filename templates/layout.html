@@ -7,7 +7,7 @@
     <body>
         <nav class="nav nav-tabs justify-content-end">
             <a class="nav-link {% block active_home %}{% endblock %}" href="{{ url_for('index') }}">Home</a>
-            <a class="nav-link {% block active_manage %}{% endblock %}" href="#">Manage Flights</a>
+            <a class="nav-link {% block active_manage %}{% endblock %}" href="{{ url_for('manage') }}">Manage Flights</a>
         </nav>
 
         <div class="container">

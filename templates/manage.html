@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}Manage Flights{% endblock %}
+{% block active_manage %}active{% endblock %}
+{% block body %}
+    <h1>Available Flights</h1>
+    <ul>
+        {% for flight in flights %}
+            <li>
+                {{ flight.origin }} to {{ flight.destination }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
